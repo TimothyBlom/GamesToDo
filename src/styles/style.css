@@ -1,0 +1,862 @@
+.gameCollection {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+}
+
+.UIcornersTop {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-bottom: -170px;
+  pointer-events: none;
+}
+
+.UIcornersTop::before {
+  content: "";
+  background: url("../Images/UI/corner.png");
+  background-size: 250px;
+  position: absolute;
+  top: -12px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+}
+
+.UIcornersTop::after {
+  content: "";
+  background: url("../Images/UI/corner.png");
+  background-size: 250px;
+  position: absolute;
+  top: -12px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.UIcornersBottom {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  margin-top: -170px;
+  pointer-events: none;
+}
+
+.UIcornersBottom::before {
+  content: "";
+  background: url("../Images/UI/corner.png");
+  background-size: 250px;
+  position: absolute;
+  bottom: -12px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.UIcornersBottom::after {
+  content: "";
+  background: url("../Images/UI/corner.png");
+  background-size: 250px;
+  position: absolute;
+  bottom: -12px;
+  right: -20px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+.gameCollectionExpandButton {
+  width: 275px;
+  height: 45px;
+  background-color: darkblue;
+  margin: auto;
+  background: url("../Images/UI/arrowHorizantal.png");
+  background-size: 275px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.gameCollectionExpandButton:active {
+  background-size: 200px;
+  background-position-x: 37px;
+  background-position-y: 10px;
+}
+
+.down {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.gameGenreContainer {
+  margin: 0px 10px 50px 10px;
+}
+
+.gameImgSmall {
+  height: 70px;
+  margin: 10px;
+  padding-left: 30px;
+}
+
+.gameGenreButton {
+  width: 220px;
+  height: 250px;
+  overflow: hidden;
+  margin: auto;
+}
+
+.gameGenreList {
+  margin-left: 200px;
+  margin-top: -250px;
+  min-height: 250px;
+}
+
+.gameGenreImg {
+  width: 400px;
+}
+
+.gameCollectionExpantion {
+  -webkit-animation: gameCollectionExpanding 1s linear;
+          animation: gameCollectionExpanding 1s linear;
+  overflow: hidden;
+  height: auto;
+}
+
+@-webkit-keyframes gameCollectionExpanding {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 2350px;
+  }
+}
+
+@keyframes gameCollectionExpanding {
+  0% {
+    height: 0px;
+  }
+  100% {
+    height: 2350px;
+  }
+}
+
+.gameGenreImgTest {
+  width: 400px;
+}
+
+.slideSmall {
+  width: 200px !important;
+}
+
+.slideBig {
+  width: 500px !important;
+}
+
+.collectionSliderContainer {
+  width: 100%;
+  min-height: 400px;
+}
+
+.gamepage {
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.gameContainer {
+  float: left;
+  width: 300px;
+  height: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -150px;
+}
+
+.game {
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  border-radius: 10px;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+          box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.title {
+  position: absolute;
+  font-size: larger;
+  margin: 80px 0 0 220px;
+}
+
+.gameImg {
+  width: 100%;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+
+.gamePageContainer {
+  position: fixed;
+  margin: auto;
+  width: 750px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: rgba(83, 83, 83, 0.418);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+.gamePageContent {
+  height: 800px;
+  margin: -500px 40px 0 40px;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 40px;
+  -webkit-animation: openScreen .5s linear;
+          animation: openScreen .5s linear;
+}
+
+.checkboxContainer {
+  margin: -130px auto 0 auto;
+}
+
+.checkbox {
+  height: 30px;
+  width: 45px;
+  margin: 250px 0 0 0px;
+  float: left;
+}
+
+.checkboxImg {
+  height: 30px;
+}
+
+#completed {
+  -webkit-filter: hue-rotate(280deg);
+          filter: hue-rotate(280deg);
+  background-image: url("../Images/UI/check.png");
+  background-position: 12px 10px;
+  background-size: 50px;
+  background-repeat: no-repeat;
+}
+
+#completedBox {
+  -webkit-filter: hue-rotate(280deg);
+          filter: hue-rotate(280deg);
+  background-image: url("../Images/UI/check.png");
+  background-position: 8px 3px;
+  background-size: 33px;
+  background-repeat: no-repeat;
+}
+
+#notRequired {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  text-decoration: line-through;
+}
+
+.gamePageUI {
+  height: 500px;
+  margin-top: 15%;
+}
+
+#pageLeftUpCorner {
+  width: 200px;
+  margin: -10px 0 0 -350px;
+  position: absolute;
+  -webkit-animation: pageLeftUpCornerAnim .3s linear;
+          animation: pageLeftUpCornerAnim .3s linear;
+}
+
+#pageRightUpCorner {
+  width: 200px;
+  margin: -10px 0 0 150px;
+  position: absolute;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  -webkit-animation: pageRightUpCornerAnim .3s linear;
+          animation: pageRightUpCornerAnim .3s linear;
+}
+
+#pageLeftbuttomCorner {
+  width: 200px;
+  margin: 690px 0 0 -350px;
+  position: absolute;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+  -webkit-animation: pageLeftbuttomCornerAnim .3s linear;
+          animation: pageLeftbuttomCornerAnim .3s linear;
+}
+
+#pageRightbuttomCorner {
+  width: 200px;
+  margin: 690px 0 0 150px;
+  position: absolute;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+  -webkit-animation: pageRightbuttomCornerAnim .3s linear;
+          animation: pageRightbuttomCornerAnim .3s linear;
+}
+
+.pageClose {
+  position: absolute;
+  width: 100px;
+  margin: 40px 0 0 240px;
+}
+
+.pageClose:hover {
+  width: 120px;
+  margin: 35px 0 0 230px;
+  cursor: pointer;
+}
+
+.pageClose:active {
+  width: 80px;
+  margin: 45px 0 0 250px;
+}
+
+.pageEdit {
+  position: absolute;
+  width: 100px;
+  margin: 40px 0 0 140px;
+}
+
+.pageEdit:hover {
+  width: 120px;
+  margin: 35px 0 0 130px;
+  cursor: pointer;
+}
+
+.pageEdit:active {
+  width: 80px;
+  margin: 45px 0 0 150px;
+}
+
+.screenshot {
+  float: left;
+  width: 100%;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-right: -100px;
+}
+
+.pageGameIcon {
+  width: 120px;
+  margin: -80px 0 0 -315px;
+  position: absolute;
+}
+
+.pageDateButtons {
+  margin-top: 425px;
+  width: 480px;
+  height: 100px;
+  position: absolute;
+}
+
+.trophyContainer {
+  width: 170px;
+  height: 120px;
+  position: absolute;
+  margin: 425px 0 0 465px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.trophyImg {
+  width: 400px;
+  margin: 0 0 0 -60px;
+  position: absolute;
+}
+
+.trophyImgContainer {
+  width: 110px;
+  height: 120px;
+  position: absolute;
+  margin: -246px 0 0 0px;
+  overflow: hidden;
+}
+
+.trophyAbandone {
+  width: 400px;
+  margin: 0px;
+}
+
+.trophyAbandoneContainer {
+  width: 70px;
+  height: 70px;
+  margin-left: 110px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.gamePageObjectives {
+  position: absolute;
+  height: auto;
+  top: 670px;
+  width: 670px;
+}
+
+.pageButtonContainer {
+  width: 270px;
+  height: 50px;
+  padding-right: 40px;
+  margin: 15px 5px 5px 5px;
+  float: left;
+}
+
+.pageButton {
+  cursor: pointer;
+  height: 50px;
+  margin-top: -5px;
+}
+
+.pageButton:active .buttonUI {
+  width: 160px;
+  margin: 10px 0 0 0px;
+}
+
+.pageButton:active .buttonText {
+  margin: -31px auto 0 80px;
+}
+
+.pageButton:active + .abandoneButtonUI {
+  width: 45px;
+  margin: -38px 0 0 68px;
+}
+
+.buttonUI {
+  width: 270px;
+}
+
+.abandoneButtonUI {
+  width: 70px;
+  position: absolute;
+  margin: -43px 0 0 113px;
+  cursor: pointer;
+}
+
+.buttonText {
+  width: 165px;
+  margin: -45px auto 0 80px;
+  font-size: large;
+}
+
+.XPpopup {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 200px;
+  height: 100px;
+  border: solid lightgreen;
+  opacity: 0;
+}
+
+#popupAnim {
+  -webkit-animation: xpfade 1s linear;
+          animation: xpfade 1s linear;
+}
+
+@-webkit-keyframes xpfade {
+  0% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 100%;
+  }
+  66% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@keyframes xpfade {
+  0% {
+    opacity: 0%;
+  }
+  33% {
+    opacity: 100%;
+  }
+  66% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+
+@-webkit-keyframes openScreen {
+  0% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes openScreen {
+  0% {
+    opacity: 0%;
+  }
+  75% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes pageLeftUpCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: -10px 0 0 -350px;
+    width: 200px;
+  }
+}
+
+@keyframes pageLeftUpCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: -10px 0 0 -350px;
+    width: 200px;
+  }
+}
+
+@-webkit-keyframes pageRightUpCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: -10px 0 0 150px;
+    width: 200px;
+  }
+}
+
+@keyframes pageRightUpCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: -10px 0 0 150px;
+    width: 200px;
+  }
+}
+
+@-webkit-keyframes pageLeftbuttomCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: 590px 0 0 -350px;
+    width: 200px;
+  }
+}
+
+@keyframes pageLeftbuttomCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: 590px 0 0 -350px;
+    width: 200px;
+  }
+}
+
+@-webkit-keyframes pageRightbuttomCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: 590px 0 0 150px;
+    width: 200px;
+  }
+}
+
+@keyframes pageRightbuttomCornerAnim {
+  0% {
+    margin: 300px 0 0 0;
+    width: 10px;
+  }
+  100% {
+    margin: 590px 0 0 150px;
+    width: 200px;
+  }
+}
+
+.singleDateButtonContainer {
+  width: 200px;
+  height: auto;
+  margin: 10px 0 0 15px;
+  float: left;
+}
+
+.dateButtonUI {
+  width: 180px;
+  margin: -10px 0 15px 0;
+  cursor: pointer;
+}
+
+.dateButtonUI:active {
+  -webkit-filter: hue-rotate(280deg);
+          filter: hue-rotate(280deg);
+  width: 110px;
+  margin-bottom: 22px;
+}
+
+.dateUI {
+  width: 180px;
+}
+
+.dateText {
+  position: absolute;
+  width: 170px;
+  margin: -90px 0 0 15px;
+  font-size: larger;
+}
+
+.confirmStartDate {
+  position: fixed;
+  margin: auto;
+  width: 550px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 280px 100px 0 100px;
+  background-color: rgba(83, 83, 83, 0.418);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+#confirmPageLeftUpCorner {
+  width: 200px;
+  margin: -10px 0 0 -290px;
+  position: absolute;
+}
+
+#confirmPageRightUpCorner {
+  width: 200px;
+  margin: -10px 0 0 90px;
+  position: absolute;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+#confirmPageLeftbuttomCorner {
+  width: 200px;
+  margin: 200px 0 0 -290px;
+  position: absolute;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+#confirmPageRightbuttomCorner {
+  width: 200px;
+  margin: 200px 0 0 90px;
+  position: absolute;
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+.dateConfirmContent {
+  position: absolute;
+  width: 550px;
+  height: 260px;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.041);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 40px;
+}
+
+.dateConfirm {
+  height: 50px;
+  cursor: pointer;
+}
+
+.dateConfirm:active {
+  height: 30px;
+  margin: 10px 20px 10px auto;
+  -webkit-filter: hue-rotate(280deg);
+          filter: hue-rotate(280deg);
+}
+
+.dateDeny {
+  height: 50px;
+  margin-left: -23px;
+  cursor: pointer;
+}
+
+.dateDeny:active {
+  height: 30px;
+  margin: 10px auto 10px auto;
+  -webkit-filter: hue-rotate(280deg);
+          filter: hue-rotate(280deg);
+}
+
+body {
+  text-align: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(darkblue), color-stop(blue), to(#6c94ec));
+  background-image: linear-gradient(to right, darkblue, blue, #6c94ec);
+  color: white;
+}
+
+.Home {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 100px;
+}
+
+header {
+  font-size: 50px;
+}
+
+.headerImg {
+  width: 700px;
+  margin-top: -100PX;
+  margin-bottom: -100PX;
+}
+
+.xpCounter {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+  margin-left: 20px;
+  margin-bottom: 50px;
+  width: 200px;
+  height: 100px;
+  z-index: 2;
+}
+
+.xpCounter p {
+  margin-top: -95px;
+  margin-left: 50px;
+  font-size: x-large;
+}
+
+.xpCounterImg {
+  width: 250px;
+  margin-top: -30px;
+  margin-left: -20px;
+}
+
+.UIBorder {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.UIBorderTopLeft {
+  width: 250px;
+  float: left;
+  margin-left: -21px;
+  margin-top: -13px;
+}
+
+.UIBorderTopRight {
+  width: 250px;
+  float: right;
+  margin-right: -21px;
+  margin-top: -13px;
+}
+
+.UIBorderBottomLeft {
+  width: 250px;
+  float: left bottom;
+  bottom: calc(-100% + 277px);
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.UIBorderBottomRight {
+  width: 250px;
+  float: right bottom;
+  bottom: calc(-100% + 277px);
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+.gameScrollerContainer {
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+  margin: 50px;
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+.swiperContainer {
+  width: 100%;
+}
+
+.swiperItem {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.test {
+  margin-top: 50px;
+}
+
+.Navigator {
+  width: 600px;
+  height: 75px;
+  background-color: rgba(104, 104, 104, 0.438);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  position: fixed;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  bottom: 0;
+  z-index: 2;
+}
+
+.navBtn {
+  width: 100px;
+}
+
+.CostumToDoGame {
+  width: 300px;
+  height: 300px;
+  margin: 50px;
+  float: left;
+}
+
+.CostumGamesListContainer {
+  height: auto;
+  background-color: green;
+}
+/*# sourceMappingURL=style.css.map */

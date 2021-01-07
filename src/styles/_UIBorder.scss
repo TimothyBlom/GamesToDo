@@ -1,0 +1,190 @@
+.game {
+  width: 500px;
+  margin: 50px auto 50px auto;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+  &:hover {
+      width: 700px;
+      margin-bottom: -71px;
+      margin-right: auto;
+      box-shadow: 4px 6px 6px rgba(0, 0, 0, 0.3), 0px 0px 40px rgba(0, 0, 0, 0.1) inset;
+  }
+  &:hover .gameImg{
+    width: 700px;
+}
+  &:active {
+      width: 400px;
+      margin-bottom: 111px;
+  }
+  &:active .gameImg{
+    width: 400px;
+}
+}
+
+.gameImg {
+  transition: 0.1s ease-in-out;
+  width: 500px;
+}
+
+.checkbox {
+  height: 35px;
+  margin: 5px;
+}
+
+.checkboxContainer {
+  margin-top: -35px;
+  margin-right: auto;
+}
+
+.gamePageContainer {
+  position: fixed;
+  margin: auto;
+  width: 750px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  background-color: rgba(83, 83, 83, 0.418);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+}
+
+//page UI
+.gamePageUI {
+  height: 500px;
+  margin-top: 25%;
+}
+
+#pageLeftUpCorner {
+  width: 200px;
+  margin: -10px 0 0 -350px;
+  position: absolute;
+}
+
+#pageRightUpCorner {
+  width: 200px;
+  margin: -10px 0 0 150px;
+  position: absolute;
+  transform: scaleX(-1);
+}
+
+#pageLeftbuttomCorner {
+  width: 200px;
+  margin: 390px 0 0 -350px;
+  position: absolute;
+  transform: scaleY(-1);
+}
+
+#pageRightbuttomCorner {
+  width: 200px;
+  margin: 390px 0 0 150px;
+  position: absolute;
+  transform: scale(-1);
+}
+
+.gamePageContent {
+  height: 500px;
+  margin: -500px 40px 0 40px;
+  background-color: rgba(0, 0, 0, 0.11);
+  border-radius: 40px;
+}
+
+//close button
+.pageClose {
+  position: absolute;
+  width: 100px;
+  margin: 120px 0 0 220px;
+      &:hover {
+          width: 120px;
+          margin: 115px 0 0 210px;
+          cursor: pointer;
+      }
+      &:active {
+        width: 80px;
+        margin: 125px 0 0 230px;
+      }
+}
+
+//screenshot
+.screenshot {
+  float: left;
+  width: 500px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-right: -100px;
+}
+
+//icons
+.pageIconContainer {
+  float: left;
+  margin: 40px 10px 0px 10px;
+  width: 120px;
+}
+
+.pageIcon {
+  width: 100px;
+}
+
+//objectives buttons
+.gamePageObjectives {
+  position: absolute;
+  height: 150px;
+  top: 490px;
+  width: 500px;
+  margin-left: 160px;
+  float: right;
+}
+
+.pageButtonContainer {
+  width: 200px;
+  height: 40px;
+  padding-right: 40px;
+  margin: 15px 5px 5px 5px;
+  float: left;
+}
+
+.pageButton {
+  cursor: pointer; 
+  height: 45px;
+  &:active .buttonUI{
+    width: 160px;
+    margin: 4px 0 0 0px;
+  }
+  &:active .buttonText{
+    margin: -32px auto 0 53px;
+  }
+  &:active + .abandoneButtonUI {
+    width: 45px;
+    margin: -38px 0 0 68px;
+  }
+}
+
+.buttonUI {
+  width: 210px;
+}
+
+.abandoneButtonUI {
+  width: 59px;
+  position: absolute;
+  margin: -43px 0 0 93px;
+  cursor: pointer;
+}
+
+.buttonText {
+  width: 145px;
+  margin: -39px auto 0 53px;
+}
+
+#completed {
+  filter: hue-rotate(280deg); //makes blue green
+  background-image: url("../Images/UI/check.png");
+  background-position: 12px 10px;
+  background-size: 33px;
+  background-repeat: no-repeat;
+}
+
+#notRequired {
+  filter: grayscale(1);
+  text-decoration: line-through;
+}

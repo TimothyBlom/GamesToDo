@@ -1,0 +1,102 @@
+.singleDateButtonContainer {
+  width: 200px;
+  height: auto;
+  margin: 10px 0 0 15px;
+  float: left;
+}
+
+.dateButtonUI {
+  width: 180px;
+  margin: -10px 0 15px 0;
+  cursor: pointer;
+  &:active {
+    filter: hue-rotate(280deg);
+    width: 110px;
+    margin-bottom: 22px;
+  }
+}
+
+.dateUI {
+  width: 180px;
+}
+
+.dateText {
+  position: absolute;
+  width: 170px;
+  margin: -90px 0 0 15px;
+  font-size: larger;
+}
+
+//date confirm popup UI
+.confirmStartDate {
+  position: fixed;
+  margin: auto;
+  width: 550px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 280px 100px 0 100px;
+  background-color: rgba(83, 83, 83, 0.418);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+}
+
+#confirmPageLeftUpCorner {
+  width: 200px;
+  margin: -10px 0 0 -290px;
+  position: absolute;
+}
+
+#confirmPageRightUpCorner {
+  width: 200px;
+  margin: -10px 0 0 90px;
+  position: absolute;
+  transform: scaleX(-1);
+}
+
+#confirmPageLeftbuttomCorner {
+  width: 200px;
+  margin: 200px 0 0 -290px;
+  position: absolute;
+  transform: scaleY(-1);
+}
+
+#confirmPageRightbuttomCorner {
+  width: 200px;
+  margin: 200px 0 0 90px;
+  position: absolute;
+  transform: scale(-1);
+}
+
+//date confirm buttons
+.dateConfirmContent {
+  position: absolute;
+  width: 550px;
+  height: 260px;
+  padding-top: 50px;
+  background-color: rgba(0, 0, 0, 0.041);
+  backdrop-filter: blur(10px);
+  border-radius: 40px;
+}
+
+.dateConfirm {
+  height: 50px;
+  cursor: pointer;
+  &:active {
+    height: 30px;
+    margin: 10px 20px 10px auto;
+    filter: hue-rotate(280deg);
+  }
+}
+
+.dateDeny {
+  height: 50px;
+  margin-left: -23px;
+  cursor: pointer;
+  &:active {
+    height: 30px;
+    margin: 10px auto 10px auto;
+    filter: hue-rotate(280deg);
+  }
+}
